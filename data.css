@@ -1,0 +1,25 @@
+body { font-family: Verdana, Geneva, sans-serif;}
+table {
+    border: 1px solid gray;
+    width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    border-collapse: collapse;
+    border-spacing: 0px;
+}
+
+th {
+    background-color: gray;
+    color: #000;
+    height: 35px;
+    font-size: 12px;
+    font-weight: bold}
+
+tr {
+    background-color: #5C5C5C;
+    height: 35px;
+    font-size: 11px;}
+table td {
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+}

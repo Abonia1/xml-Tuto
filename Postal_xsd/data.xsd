@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="utilisateurs_adresses">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element minOccurs="0" maxOccurs="unbounded" ref="adresse"/><!--unbouned =infini-->
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="adresse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="numero" type="xs:integer"/>
+                <xs:element name="nom_de_rue" type="nom_de_rue"/>
+                <xs:element name="complement" type="xs:string"/>
+                <xs:element name="code_postal" type="code_postal"/>
+                <xs:element name="ville" type="xs:string"/>
+                <xs:element name="region" type="xs:string"/>
+                <xs:element name="pays" type="pays"/>
+            </xs:sequence>
+            <xs:attribute name="type" use="required" type="xs:string"/>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="nom_de_rue">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="type_de_voie" use="required" type="type_de_voie"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:simpleType name="code_postal">
+        <xs:restriction base="xs:integer">
+            <xs:pattern value="[0-9]{5}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="type_de_voie">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="rue"/>
+            <xs:enumeration value="ruelle"/>
+            <xs:enumeration value="allée"/>
+            <xs:enumeration value="voie"/>
+            <xs:enumeration value="impasse"/>
+            <xs:enumeration value="chemin"/>
+            <xs:enumeration value="avenue"/>
+            <xs:enumeration value="boulevard"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="pays">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="France"/>
+            <xs:enumeration value="Angleterre"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+</xs:schema>

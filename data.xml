@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE listes_articles SYSTEM "data.dtd">
+<?xml-stylesheet href="data.xsl" type="text/xsl"?>
+
+<listes_articles  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="data.xsd">
+    <article id="1" lang="fr">
+        <title>Article A</title>
+        <content>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam</content>
+        <author>Marie</author>
+        <listes_images>
+            <img>img1.jpg</img>
+        </listes_images>
+    </article>
+    <article id="2" lang="fr">
+        <title>Article A</title>
+        <content>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam</content>
+        <author>Marie</author>
+        <listes_images>
+            <img>img2.jpg</img>
+        </listes_images>
+    </article>
+    <article id="3">
+        <title>Article C</title>
+        <content>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam quasi nobis dicta saepe maiores voluptatibus in corporis cumque obcaecati, harum.</content>
+        <author>Marie</author>
+        <listes_images>
+            <img>img3.jpg</img>
+        </listes_images>
+    </article>
+    <article id="4" lang="en">
+        <title>Article A</title>
+        <content>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam quasi nobis dicta saepe maiores voluptatibus in corporis cumque obcaecati, harum.</content>
+        <author>Marie</author>
+        <listes_images>
+            <img>img4.jpg</img>
+            <img>img5.jpg</img>
+        </listes_images>
+    </article>
+    <article id="5" lang="fr">
+        <title>Article A</title>
+        <content>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam quasi nobis dicta saepe maiores voluptatibus in corporis cumque obcaecati, harum.</content>
+        <author>Marie</author>
+        <listes_images>
+            <img>img6.jpg</img>
+        </listes_images>
+    </article>
+</listes_articles>

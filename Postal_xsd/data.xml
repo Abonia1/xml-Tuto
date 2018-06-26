@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<utilisateurs_adresses xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="data.xsd">
+
+    <adresse type="domicile">
+        <numero>8</numero>
+        <nom_de_rue type_de_voie="rue">Changarnier</nom_de_rue>
+        <complement>bat B</complement>
+        <code_postal>75012</code_postal>
+        <ville>Paris</ville>
+        <region>Ile de france</region>
+        <pays>France</pays>
+    </adresse>
+
+    <adresse type="entreprise">
+        <numero>29</numero>
+        <nom_de_rue type_de_voie="rue">du docteur heulin</nom_de_rue>
+        <complement>bat 2</complement>
+        <code_postal>75017</code_postal>
+        <ville>Paris</ville>
+        <region>Ile de France</region>
+        <pays>France</pays>
+    </adresse>
+</utilisateurs_adresses>

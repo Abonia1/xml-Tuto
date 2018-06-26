@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!ELEMENT utilisateurs_adresses (adresse+)>
+<!ELEMENT adresse (numero, nom_de_rue, complement?, code_postal, ville, region, pays)>
+<!ELEMENT numero (#PCDATA)>
+<!ELEMENT nom_de_rue (#PCDATA)>
+<!ELEMENT complement (#PCDATA)>
+<!ELEMENT code_postal (#PCDATA)>
+<!ELEMENT ville (#PCDATA)>
+<!ELEMENT region (#PCDATA)>
+<!ELEMENT pays (#PCDATA)>
+
+<!ATTLIST adresse
+type CDATA #REQUIRED
+>
+<!ATTLIST nom_de_rue
+  type_de_voie CDATA #REQUIRED
+>

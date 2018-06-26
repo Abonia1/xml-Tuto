@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="listes_articles">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element minOccurs="0" maxOccurs="unbounded" ref="article"/><!--unbouned =infini-->
+            </xs:sequence>
+        </xs:complexType>
+        <xs:unique name="article_id">
+            <xs:selector xpath="./article"/> <!-- ./ parcours tous les articles -->
+            <xs:field xpath="@id"/> <!-- la où l'on veut verifier que c'est unique -->
+        </xs:unique>
+    </xs:element>
+
+    <xs:element name="article">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="title" type="xs:string"/>
+                <xs:element name="content" type="xs:string"/>
+                <xs:element name="author" type="xs:string"/>
+                <xs:element minOccurs="0" maxOccurs="1" ref="listes_images"/>
+            </xs:sequence>
+            <xs:attribute name="id" use="required" type="xs:integer"/>
+            <xs:attribute name="lang" type="language"/>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="listes_images">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element minOccurs="1" maxOccurs="3" name="img" type="img_path"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:simpleType name="language">
+        <xs:restriction base="xs:string">
+            <!-- soit Regex soit enumeration <xs:pattern value="(fr|en)$"/> -->
+            <xs:enumeration value="fr"/>
+            <xs:enumeration value="en"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <!-- on cree un simpleType pour tester des types de fichers ex jpg png... -->
+    <xs:simpleType name="img_path">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[a-zA-Z0-9\._-]{3,25}\.(jpg|JPG|jpeg|JPEG|png|PNG)"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>
+
+<!-- les types par defaut des valeurs -->
+<!--
+    xs:string
+    xs:decimal
+    xs:integer
+    xs:boolean
+    xs:date
+    xs:time
+-->

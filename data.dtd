@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!ELEMENT listes_articles (article*)>
+<!ELEMENT article (title, content, author, listes_images*)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT content (#PCDATA)>
+<!ELEMENT author (#PCDATA)>
+<!ELEMENT listes_images (img+)>
+<!ELEMENT img (#PCDATA)>
+<!ATTLIST article
+    id CDATA #REQUIRED
+    lang CDATA #IMPLIED
+>
+<!ATTLIST listes_articles
+    xmlns:xsi CDATA #REQUIRED
+    xsi:noNamespaceSchemaLocation CDATA #REQUIRED
+>
